@@ -49,7 +49,6 @@ nav a{
 }
 nav a:hover {
     background-color: #21b4be;
-    display:flex;
 }
 
 
@@ -67,8 +66,18 @@ nav a:hover {
     align-items: center;
     text-align: center;
 }
+.secciones p{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #000;
+    font-family: Inter;
+    font-size: 38px;
+}
 .secciones > div:first-child {
-    margin-right: 20px;
+    margin-right: 20%;
     position: relative;
     left: 10px;
 }
@@ -90,16 +99,12 @@ img{
     color: #000;
     font-family: Inter;
     font-size: 64px;
-    margin: 0 20px;
+    margin: 0 30%;
 }
 
 .menu-secundario{
     margin-left: 10%;
     margin-right: 83.75%;
-}
-.menu-secundario a:hover{
-    background-color: #27989F;
-    display:flex;
 }
 .menu-secundario ul{
     list-style-type: none;
@@ -115,6 +120,10 @@ img{
     text-decoration: none;
     align-items: start;
     justify-content: start;
+}
+.menu-secundario a:hover{
+    background-color: #27989F;
+    display:flex;
 }
 
 footer {
@@ -149,7 +158,7 @@ footer p{
     text-align: center;
     color: #000;
     font-family: Inter;
-    font-size: 48px;
+    font-size: 38px;
 }
 
 .parrafodatper{
@@ -160,7 +169,7 @@ footer p{
     text-align: center;
     color: #000;
     font-family: Inter;
-    font-size: 48px;
+    font-size: 38px;
 }
 
 @media(max-width: 550px){
