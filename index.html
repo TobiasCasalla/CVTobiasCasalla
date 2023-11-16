@@ -8,6 +8,22 @@
 </head>
 <body>
     
+    <button id="boton" type="button">Haz clic aquí para ingresar tu nombre</button>
+
+    <script>
+        function pedirNombre() {
+            var nombre = prompt("¿Cómo te llamas?");
+            if (nombre != null && nombre !== "") {
+                alert("¡Hola, " + nombre + "! ¡Bienvenido a mi CV!");
+            } else {
+                alert("¡Hola! ¡Bienvenido a mi CV!");
+            }
+        }
+
+        var boton = document.querySelector("#boton");
+        boton.setAttribute("style", "background-color: blue; color: white;");
+        boton.addEventListener("click", pedirNombre);
+    </script>
     
     <nav>
         <ul>
