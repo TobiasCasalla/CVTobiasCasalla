@@ -1,68 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 h1{
-    color: rgb(0, 0, 0);
+    text-align:left;
+    background-color: #1FB692;
+    padding: 20px;
+    margin-top: 15px;
+    display:flex;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    background-color: #1FB692;;
+    text-align: center;
+    display:flex;
+    justify-content: space-around;
+}
+nav li{
     display: flex;
 }
+nav a{
+    transition: background-color 0.5s;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    background-color: aqua;
+    border-radius: 0px;
+    border: solid 1px #27989F;
+    margin: 5px;
+    padding: 10px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    
+}
+nav a:hover {
+    background-color: #21b4be;
+    display:flex;
+}
+
+
+.contenido{
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    align-content: center;
+    justify-content: space-around;
+
+}
+
+.secciones{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.secciones > div:first-child {
+    margin-right: 20px;
+    position: relative;
+    left: 10px;
+}
+
 img{    
     padding: 5px;
+    margin: 0;
     background-color: #A3C55B;
-    border-radius: 250px;
+    border-radius: 50%;
     border: solid 1px  #000000;
-    width: 250px;
-    height: 250px;
-    display: flex;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
-.textocentral{
+.secciones h2 {
     display: flex;
     flex-direction: column;
     text-align: center;
     color: #000;
     font-family: Inter;
     font-size: 64px;
+    margin: 0 20px;
 }
-#titulo {
-    background-color: #1FB692;
-    display: flex;
+
+.menu-secundario{
+    margin-left: 10%;
+    margin-right: 83.75%;
 }
+.menu-secundario a:hover{
+    background-color: #27989F;
+    display:flex;
+}
+.menu-secundario ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+}
+.menu-secundario a{
+    transition: background-color 0.5s;
+    display:flex;
+    text-align: left;
+    width:auto;
+    color:#000;
+    text-decoration: none;
+    align-items: start;
+    justify-content: start;
+}
+
 footer {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #1F92B6;
-    width: auto;
     height: 73px;
     color: #000;
     font-family: Inter;
     font-size: 24px;
     display: flex;
-}
-nav{
-    background-color: #1FB692;;
-    height: 155px;
-    width: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.boton{
-    color: #000;
-    font-family: Inter;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: aqua;
-    border-radius: 0px;
-    border: solid 1px #27989F;
-    margin: 15px;
-    padding: 15px;
-    width: 300px;
-    height: 50px;
-}
-ul{
-    color: #000;
-    font-family: Inter;
-    font-size: 24px;
-    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+footer p{
+    display:flex;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
 .parrafoexp{
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -70,31 +151,10 @@ ul{
     font-family: Inter;
     font-size: 48px;
 }
-.parrafoest1{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: #000;
-    font-family: Inter;
-    font-size: 48px;
-}
-.parrafoest2{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: #000;
-    font-family: Inter;
-    font-size: 48px;
-}
-.parrafoest3{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: #000;
-    font-family: Inter;
-    font-size: 48px;
-}
+
 .parrafodatper{
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -102,6 +162,7 @@ ul{
     font-family: Inter;
     font-size: 48px;
 }
+
 @media(max-width: 550px){
     body{
         background-color: #000;
