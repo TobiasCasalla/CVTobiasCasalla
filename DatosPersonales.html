@@ -6,6 +6,24 @@
     <title>CV TOBIAS CASALLA - DATOS PERSONALES</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+<style>
+    body {
+      background-image: url('img/auroraboreal.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .detalles {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+      display: flex;
+      flex-direction: column;
+    }
+</style>
 <body>
 
     <button id="boton" type="button">Haz clic aquí para ingresar tu nombre</button>
@@ -23,6 +41,17 @@
         var boton = document.querySelector("#boton");
         boton.setAttribute("style", "background-color: blue; color: white;");
         boton.addEventListener("click", pedirNombre);
+    
+        function mostrarDetalles(seccion) {
+            var detalles = document.getElementById(seccion + 'Detalles');
+            if (detalles.style.visibility === 'hidden') {
+            detalles.style.visibility = 'visible';
+            detalles.style.opacity = '1';
+            } else {
+            detalles.style.visibility = 'hidden';
+            detalles.style.opacity = '0';
+            }
+        }
     </script>
 
     <nav>
@@ -42,13 +71,15 @@
                 <img src="img/FotoCV.jpg" alt="FotoCV">
             </div>
             <div>
-                <h2>Información sobre mi.</h2>
-                <p class="parrafodatper">Soy Bachiller en Ciencias Económicas. Actualmente me encuentro estudiando la carrera Tecnicatura Universitaria en Desarrollo de Software en la Universidad Argentina de la Empresa. Cuento con conocimientos del paquete Office. Hablo y escribo en inglés en un nivel avanzado. Cuento con conocimiento básico sobre programación en lenguajes C, Javascript y HTML5.</p>
+                <h2 onclick="mostrarDetalles('datospersonales')">Información sobre mi.</h2>
+                <div id="datospersonalesDetalles" class="detalles">
+                    <p class="parrafodatper">Soy Bachiller en Ciencias Económicas. Actualmente me encuentro estudiando la carrera Tecnicatura Universitaria en Desarrollo de Software en la Universidad Argentina de la Empresa. Cuento con conocimientos del paquete Office. Hablo y escribo en inglés en un nivel avanzado. Cuento con conocimiento básico sobre programación en lenguajes C, Javascript y HTML5.</p>
+                </div>
             </div>
         </div>
         <div class="menu-secundario">
             <ul>
-                <a href="Inicio.html"> <li>Inicio.</li></a>
+                <a href="index.html"> <li>Inicio.</li></a>
                 <a href="Estudios.html"> <li>Estudios.</li></a>
                 <a href="Experiencia.html"> <li>Experiencia.</li></a>
             </ul>
