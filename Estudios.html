@@ -6,6 +6,23 @@
     <title>CV TOBIAS CASALLA - ESTUDIOS</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+<style>
+    body {
+      background-image: url('img/auroraboreal.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+    .detalles {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+      display: flex;
+      flex-direction: column;
+    }
+</style>
 <body>
 
     <button id="boton" type="button">Haz clic aquí para ingresar tu nombre</button>
@@ -23,6 +40,17 @@
         var boton = document.querySelector("#boton");
         boton.setAttribute("style", "background-color: blue; color: white;");
         boton.addEventListener("click", pedirNombre);
+        
+        function mostrarDetalles(seccion) {
+            var detalles = document.getElementById(seccion + 'Detalles');
+            if (detalles.style.visibility === 'hidden') {
+            detalles.style.visibility = 'visible';
+            detalles.style.opacity = '1';
+            } else {
+            detalles.style.visibility = 'hidden';
+            detalles.style.opacity = '0';
+            }
+        }
     </script>
 
     <nav>
@@ -42,15 +70,17 @@
                 <img src="img/FotoCV.jpg" alt="FotoCV">
             </div>
             <div>
-                <h2>Mis estudios.</h2>
-                <p>Colegio San Ignacio: 2005 – 2019 Escuela primaria y secundaria con orientación en Ciencias Económicas Emilio Mitre 277, Ezeiza, Provincia de Buenos Aires 011 4232-0547</p>   
-                <p>Tecnicatura en Desarrollo de Software: 2020 – 2023 Alfonsina Storni 41, B1802 Ezeiza, Provincia de Buenos Aires. 011 4480-0428</p>
-                <p>Tecnicatura en Desarrollo de Software: 2023 – EN CURSO Lima 757, C1073, CABA. 011 4480-0428</p>                
+                <h2 onclick="mostrarDetalles('estudios')">Mis estudios.</h2>
+                <div id="estudiosDetalles" class="detalles">
+                    <p>Colegio San Ignacio: 2005 – 2019 Escuela primaria y secundaria con orientación en Ciencias Económicas Emilio Mitre 277, Ezeiza, Provincia de Buenos Aires 011 4232-0547</p>   
+                    <p>Tecnicatura en Desarrollo de Software: 2020 – 2023 Alfonsina Storni 41, B1802 Ezeiza, Provincia de Buenos Aires. 011 4480-0428</p>
+                    <p>Tecnicatura en Desarrollo de Software: 2023 – EN CURSO Lima 757, C1073, CABA. 011 4480-0428</p>
+                </div>           
             </div>
         </div>
         <div class="menu-secundario">
             <ul>
-                <a href="Inicio.html"> <li>Inicio.</li></a>
+                <a href="index.html"> <li>Inicio.</li></a>
                 <a href="DatosPersonales.html"> <li>Datos Personales.</li></a>
                 <a href="Experiencia.html"> <li>Experiencia.</li></a>
             </ul>
