@@ -6,6 +6,23 @@
     <title>CV TOBIAS CASALLA - INICIO</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+<style>
+    body {
+        background-image: url('img/auroraboreal.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+    }
+    .detalles {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+      display: flex;
+      flex-direction: column;
+    }
+</style>
 <body>
     
     <button id="boton" type="button">Haz clic aquí para ingresar tu nombre</button>
@@ -23,6 +40,17 @@
         var boton = document.querySelector("#boton");
         boton.setAttribute("style", "background-color: blue; color: white;");
         boton.addEventListener("click", pedirNombre);
+
+        function mostrarDetalles(seccion) {
+            var detalles = document.getElementById(seccion + 'Detalles');
+            if (detalles.style.visibility === 'hidden') {
+            detalles.style.visibility = 'visible';
+            detalles.style.opacity = '1';
+            } else {
+            detalles.style.visibility = 'hidden';
+            detalles.style.opacity = '0';
+            }
+        }
     </script>
     
     <nav>
